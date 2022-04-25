@@ -16,13 +16,16 @@ let package = Package(
         .target(
             name: "GT3CaptchaBundle",
             path: "Sources",
+            exclude: [
+                "GT3Captcha.xcframework"
+            ],
             resources: [
                 .copy("GT3Captcha.bundle"),
             ]
         ),
         .binaryTarget(
             name: "GT3Captcha",
-            path: "GT3Captcha.xcframework"
+            path: "Sources/GT3Captcha.xcframework"
         )
     ]
 )
